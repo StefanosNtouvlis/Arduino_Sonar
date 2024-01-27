@@ -1,31 +1,34 @@
-# Smart Automated Trashcan
+# Sonar Project
 
 ## Overview
 
-Welcome to the repository for the "smart," automated trashcan project! In this project, we've created an innovative solution using an Arduino Uno microcontroller, various electronic components, and simple materials to build a trashcan that opens automatically when an object is detected.
+Welcome to the repository for the Sonar project! In this project, we've repurposed components from the previous "smart" automated trashcan project to create a sonar system. By reusing components, we uphold principles of sustainability while exploring new applications for existing hardware.
 
 ## Components
 
-The main components utilized in this project include:
-- **Arduino Uno Microcontroller:** Acts as the brain of the system, controlling the overall operation.
-- **Servo Mini 9g Motor:** Responsible for opening and closing the lid of the trashcan.
-- **5V Active Buzzer:** Produces sound signals to indicate the successful operation of the trashcan.
-- **Ultrasonic Sensor:** Detects objects in the vicinity and triggers the lid-opening mechanism.
-- **Jumper Cables:** Used for connecting and organizing the electronic components.
-- **USB-B Cable:** Serves as both the power source and the means to upload the code to the Arduino Uno.
+The main components utilized in this project are similar to those used in the smart bin project:
+- **Arduino Uno Microcontroller**
+- **Servo Mini 9g Motor**
+- **Ultrasonic Sensor**
+- **Jumper Cables**
+- **USB-B Cable**
 
-For non-electronic parts, we've employed:
-- **Plastic Bin:** Forms the base of the trashcan.
-- **Cardboard:** Used to create the lid.
-- **Thread and Small Weight:** Generate the leverage needed for opening the lid.
-- **Scotch Tape:** Secures connections between the lid and bin, as well as stabilizes the motor.
+Additionally, we've incorporated:
+- **Breadboard:** Used to facilitate multiple connections required for the project.
+- **Glue Gun:** Utilized to secure the sensor onto the motor for stable operation.
 
 ## Code
 
-The code for this project is simple and written in the Arduino IDE. You can find and experiment with it by downloading the `smartbin.ino` file. The code is uploaded to the Arduino Uno via the USB-B cable connected to a laptop.
+The code for this project consists of two parts:
+
+### Arduino Code
+The first part is written in the Arduino IDE and uploaded to the Arduino Uno microcontroller. You can experiment with it by downloading the `radar_ultrasonic.ino` file. This code controls the interaction between the ultrasonic sensor and the servo motor.
+
+### Processing Code
+The second part is written in Processing, a programming language and IDE specifically designed for visual arts and interactive graphics. You can play with it by downloading the `radar_ultrasonic.pde` file. This code creates a visual representation of the sonar data received from the Arduino, displaying it on the monitor with a red color indication.
 
 ## Functionality
 
-The smartbin operates as expected from an automated trashcan. When an object enters the active radius of the ultrasonic sensor (adjustable within the sensor's capabilities), a signal is sent to the controller. The motor turns, pulling the thread and opening the lid. Simultaneously, the buzzer activates, providing an audible signal of the successful operation (and potentially annoying the neighbors).
+The sonar system functions similarly to a traditional sonar device. The servo motor turns indefinitely, continuously scanning the surroundings. When an object enters the active radius of the ultrasonic sensor (adjustable within the sensor's capabilities), a signal is sent to the controller. The Arduino reads this signal and passes it to Processing, where it appears on the monitor as a visual representation in red color, indicating the presence of an object.
 
-Feel free to explore the code, suggest improvements, or adapt the project to suit your needs! If you have any questions or run into issues, don't hesitate to reach out. Happy coding!
+Feel free to explore the code, suggest improvements, or adapt the project to suit your needs! If you have any questions or encounter issues, don't hesitate to reach out. Enjoy experimenting with sonar technology!
